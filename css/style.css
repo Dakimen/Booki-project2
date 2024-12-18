@@ -67,15 +67,18 @@ header {
 header img {
     width: 61px;
     height: 19px;
-    margin-left: 50px;
     margin-top: 25px;
     margin-bottom: 30px;
     margin-right: 50px;
 }
 
+nav {
+    gap: 68px;
+}
+
 nav a {
     margin: 10px;
-    margin-top: 19px;
+    margin-top: 17px;
     padding-top: 5px;
 }
 
@@ -84,23 +87,44 @@ nav a:hover {
     color: rgb(0, 101, 252);
 }
 
+/****** Section informations *******/
+.section-info {
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-info p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/****** Titre de la page ********/
+.titre-de-la-page {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.titre-de-la-page h1 {
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
 /****** Formulaire de recherche *******/
 .formulaire-de-recherche {
     display: flex;
-    margin-bottom: 30px;
 }
 .formulaire-de-recherche i {
     background-color: var(--main-bg-color);
     padding: 20px;
     color:black;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 #searchsite {
-    font-size: 13px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    font-size: 18px;
     font-weight: 700;
     border: 1px rgba(0, 0, 0, 0.05) solid;
     padding-left: 23px;
@@ -108,18 +132,74 @@ nav a:hover {
 
 .searchbutton {
     color: white;
-    background-color: blue;
+    background-color:rgb(0, 101, 252);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 18px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.searchbutton h2 {
+    font-size: 18px;
 }
 
 .searchbutton i {
     color: white;
-    background-color: blue;
+    background-color: rgb(0, 101, 252);
     display: none;
+}
+
+/****** Filtres ********/
+.filtres {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.filtres h3 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+.filtres-menu {
+    display: flex;
+}
+
+.filtre-bouton {
+    display: flex;
+    border: 2px var(--main-bg-color) solid;
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 10px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.filtre-bouton:hover {
+    background-color: rgb(222, 235, 255);
+}
+
+/******* Strip nb hébergements dans la ville choisie *******/
+
+.logements-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.logements-info i {
+    border: 2px var(--main-bg-color) solid;
+    border-radius: 20px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -216,7 +296,56 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+/******* Activités *******/
+.activités {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
+.activités .section-title {
+    margin-bottom: 15px;
+}
+.activités-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.activites_subcontainer {
+    display: flex;
+    gap: 28px;
+}
+
+.activités .card {
+    height: 270px;
+}
+
+.activités .card img {
+    height: 380px;
+    width: 297px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/****** Footer *******/
+.footer {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: flex-start;
+}
+.colonne-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width:33%;
+}
+
+.colonne-footer span {
+    font-size: 18px;
+    font-weight: 700;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -224,6 +353,12 @@ nav a:hover {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -254,9 +389,21 @@ nav a:hover {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activités .card {
+        width: 195px;
+    }
+
+    .activités .card img {
+        height: 200px;
+        width: 195px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
 }
+
+

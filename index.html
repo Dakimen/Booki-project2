@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -21,12 +21,16 @@
                 <img src="images/logo/Booki.png" alt="logo Booki">
             </div>
             <nav>
-                <div class="boite-nav">
-                    <a href="index.html#ancre-hebergements">Hébergements</a>
-                </div>
-                <div class="boite-nav">
-                    <a href="index.html#ancre-activites">Activités</a>
-                </div>
+                <a href="index.html#ancre-hebergements">
+                    <div class="boite-nav">
+                        <p>Hébergements</p>
+                    </div>
+                </a>
+                <a href="index.html#ancre-activites">
+                    <div class="boite-nav">
+                        <p>Activités</p>
+                    </div>
+                </a>
             </nav>
         </header>
         <main>
@@ -40,7 +44,7 @@
                     <input type="search" placeholder="Marseille, France" id="searchsite" name="search">
                     <button class="searchbutton">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <h2>Rechercher</h2>
+                        <span>Rechercher</span>
                     </button>
                 </div>
                 <div class="filtres">
@@ -48,25 +52,25 @@
                     <div class="filtres-menu">
                         <a href="#" class="filtre-bouton">
                             <i class="fa-solid fa-money-bill-wave"></i>
-                            <p><span>Économique</span></p>
+                            <p>Économique</p>
                         </a>
                         <a href="#" class="filtre-bouton">
                             <i class="fa-solid fa-person"></i>
                             <p>Familial</p>
                         </a>
                         <a href="#" class="filtre-bouton">
-                            <i class="fa-solid fa-heart"></i>
-                            <p>Romantique</p>
+                            <i class="fa-solid fa-heart"></i>                            
+                            <p>Romantique</p>                            
                         </a>
                         <a href="#" class="filtre-bouton">
-                            <i class="fa-solid fa-fire"></i>
+                            <i class="fa-solid fa-fire"></i>                            
                             <p>Nos pépites</p>
                         </a>
                     </div>
                 </div>
                 <div class="logements-info">
                     <i class="fa-solid fa-info fa-xs"></i>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    <span>Plus de 500 logements sont disponibles dans cette ville</span>
                 </div>
             </div>
             <div class="hebergements-and-populaires">
@@ -261,7 +265,6 @@
             <section class="activités" id="ancre-activites">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activités-container">
-                    <div class="activites_subcontainer">
                         <a href="#">
                             <article class="card">
                                 <img src="images/activites/reno-laithienne.jpg" alt="Vieux-Port de Marseille">
@@ -271,11 +274,9 @@
                         <a href="#">
                             <article class="card">
                                 <img src="images/activites/paul-hermann.jpg" alt="Fort de Pomègues">
-                                <h3 class="card-title">Port de Pomègues</h3>
+                                <h3 class="card-title">Fort de Pomègues</h3>
                             </article>
                         </a>
-                    </div>
-                    <div class="activites_subcontainer">
                         <a href="#">
                             <article class="card">
                                 <img src="images/activites/kilyan-sockalingum.jpg" alt="Parc national des Calanques">
@@ -288,12 +289,12 @@
                                 <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
                             </article>
                         </a>
-                    </div>
+                    
                 </div>
             </section>
         </main>
         <footer>
-            <section class="footer">
+            <div class="footer">
                 <div class="colonne-footer">
                     <a href="#"><span>À propos</span></a>
                     <a href="#">Fonctionnement du site</a>
@@ -310,7 +311,7 @@
                     <a href="#">Centre d'aide</a>
                     <a href="#">Nous contacter</a>
                 </div>
-            </section>
+            </div>
         </footer>
     </div>
 </body>

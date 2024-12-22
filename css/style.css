@@ -78,14 +78,17 @@ nav {
 }
 
 nav a {
-    margin: 10px;
-    margin-top: 17px;
-    padding-top: 5px;
+    margin-top: -8px;
 }
 
+.boite-nav p {
+    margin-top: 5px;
+}
+
+
 nav a:hover {
-    border-top: 2px rgb(0, 101, 252) solid;
-    color: rgb(0, 101, 252);
+    border-top: 2px var(--main-color) solid;
+    color: var(--main-color);
 }
 
 /****** Section informations *******/
@@ -127,26 +130,27 @@ nav a:hover {
 #searchsite {
     font-size: 18px;
     font-weight: 700;
-    border: 1px rgba(0, 0, 0, 0.05) solid;
+    border: 1px rgba(0, 0, 0, 0.1) solid;
     padding-left: 23px;
 }
 
 .searchbutton {
     color: white;
-    background-color:rgb(0, 101, 252);
+    background-color: var(--main-color);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-left: 18px;
     padding-right: 18px;
 }
 
-.searchbutton h2 {
+.searchbutton span {
     font-size: 18px;
+    font-weight: 700;
 }
 
 .searchbutton i {
     color: white;
-    background-color: rgb(0, 101, 252);
+    background-color: var(--main-color);
     display: none;
 }
 
@@ -179,10 +183,11 @@ nav a:hover {
     height: 50px;
     font-size: 17px;
     font-weight: 700;
+    margin-right: 5px;
 }
 
 .filtre-bouton:hover {
-    background-color: rgb(222, 235, 255);
+    background-color: var(--filter-bg-color);
 }
 
 /******* Strip nb hébergements dans la ville choisie *******/
@@ -227,17 +232,23 @@ nav a:hover {
     justify-content: space-between;
     align-content: stretch;
     row-gap: 30px;
+    margin-top: 20px;
+}
+
+.hebergements-cards a {
+width: 30%;
+height: 270px;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    height: 100%;
 }
 
 .hebergements-cards .card img {
     height: 124px;
-    width: 240px;
+    width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -309,18 +320,16 @@ nav a:hover {
 .activités-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 28px;
+    justify-content: space-between;
 }
 
-.activites_subcontainer {
-    display: flex;
-    gap: 28px;
+.activités-container a {
+    width: 22%;
 }
 
 .activités .card img {
     height: 380px;
-    width: 297px;
+    width: 100%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -328,7 +337,7 @@ nav a:hover {
 /****** Footer *******/
 .footer {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: var(--main-bg-color);
     align-items: flex-start;
 }
 .colonne-footer {
@@ -392,17 +401,9 @@ nav a:hover {
         flex-wrap: nowrap;
     }
 
-    .activites_subcontainer {
-        flex: 1 1 auto;
-    }
-
-    .activités .card {
-        flex: 1 1 auto;
-    }
-
     .activités .card img {
         max-height: 200px;
-        max-width: 195px;
+        max-width: 100%;
     }
 
 }
@@ -421,10 +422,13 @@ nav a:hover {
     .logo {
         display: flex;
         justify-content: center;
+        height: 40px;
+        margin-bottom: 10px;
     }
 
     .logo img {
         margin-right: 0px;
+        margin-top: 10px;
     }
 
     nav {
@@ -432,9 +436,120 @@ nav a:hover {
         gap: 0px;
     }
 
+    nav a {
+        width: 50%;
+        margin: 0px;
+    }
+
+    nav a:active {
+        border-bottom: 2px var(--main-color) solid;
+        color: var(--main-color);
+    }
+
+    nav a:focus {
+        border-bottom: 2px var(--main-color) solid;
+        color: var(--main-color);
+    }
+
     .boite-nav {
-        border-bottom:2px #D9D9D9 solid;
-        padding-bottom: 10px;
+        border-bottom:2px var(--main-bg-color) solid;
+        padding-bottom: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #searchsite {
+        width: 70%;
+        padding-left: 10px;
+    }
+
+    .searchbutton {
+        border-radius: 20px;
+        margin-left: -15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .searchbutton i {
+        display:block;
+        border-radius: 20px;
+    }
+
+    .searchbutton span {
+        display: none;
+        font-weight: 800;
+    }
+
+    .filtres-menu {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+
+    .filtre-bouton {
+        padding-right: 0px;
+        padding-left: 10px;
+        width: 42%;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .populaires {
+        margin-top: 0px;
+    }
+
+    .populaires-cards {
+        flex-wrap: wrap;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    #ancre-hebergements {
+        background-color: white;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
+        height: auto;
+    }
+
+    .hebergements-cards img {
+        object-position: center;
+    }
+
+    .hebergements-cards h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hebergements-cards p {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    
+    .activités-container {
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+
+    .activités-container a {
+        width: 100%;
+    }
+
+    .activités-container a img {
+        max-width: none;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .colonne-footer {
+        width: 100%;
     }
 }
 

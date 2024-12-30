@@ -79,6 +79,7 @@ nav {
 
 nav a {
     margin-top: -8px;
+    padding: 10px;
 }
 
 .boite-nav p {
@@ -175,7 +176,7 @@ nav a:hover {
 .filtre-bouton {
     display: flex;
     border: 2px var(--main-bg-color) solid;
-    border-radius: 20px;
+    border-radius: 100px;
     align-items: center;
     padding-left: 18px;
     padding-right: 18px;
@@ -325,6 +326,16 @@ height: 270px;
 
 .activités-container a {
     width: 22%;
+    position: relative;
+    height: auto;
+}
+
+.activités .card {
+    padding: 0;
+    box-shadow: 0 0 10px lightgray;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .activités .card img {
@@ -332,6 +343,12 @@ height: 270px;
     width: 100%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+}
+
+.activités .card-title {
+    padding: 10px;
+    margin: 0;
+    height: 50px;
 }
 
 /****** Footer *******/
@@ -412,11 +429,19 @@ height: 270px;
 @media (max-width: 767.98px) {
     /* ... */
 
+    body {
+        margin: 0;
+    }
+
     .main-container {
         padding: 0px;
     }
     header {
         flex-direction: column;
+    }
+
+    .section-info {
+        padding: 0 30px;
     }
 
     .logo {
@@ -439,6 +464,7 @@ height: 270px;
     nav a {
         width: 50%;
         margin: 0px;
+        padding: 0;
     }
 
     nav a:active {
@@ -484,12 +510,14 @@ height: 270px;
     .filtres-menu {
         flex-wrap: wrap;
         row-gap: 5px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .filtre-bouton {
-        padding-right: 0px;
-        padding-left: 10px;
-        width: 42%;
+        width: 48%;
+        box-sizing: border-box;
     }
 
     .hebergements-and-populaires {

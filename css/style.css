@@ -169,9 +169,10 @@ nav a:hover {
     font-size: 18px;
 }
 
-.filtres h2 {
+.filtres p span {
     margin: 0;
     font-size: 18px;
+    font-weight: 700;
 }
 
 .filtres-menu {

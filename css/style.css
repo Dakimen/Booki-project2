@@ -137,6 +137,10 @@ nav a:hover {
     padding-left: 23px;
 }
 
+#searchsite::placeholder {
+    color: black;
+}
+
 #searchsite:focus-visible {
     outline: none;
 }
